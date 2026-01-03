@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { X, Database, LayoutDashboard, PlusCircle, Upload, BarChart3, LogOut, Settings } from 'lucide-react';
+import { X, Database, LayoutDashboard, PlusCircle, Upload, BarChart3, LogOut, Settings, List } from 'lucide-react';
 
 interface User {
     email: string;
@@ -40,6 +40,7 @@ export default function Sidebar({ user, isOpen, onClose }: SidebarProps) {
     const navItems = [
         { href: '/dashboard', icon: LayoutDashboard, label: 'Tableau de Bord' },
         { href: '/add_page', icon: PlusCircle, label: 'Ajouter' },
+        { href: '/records', icon: List, label: 'Enregistrements' },
         { href: '/import_page', icon: Upload, label: 'Importer' },
         { href: '/analytics', icon: BarChart3, label: 'Analyses' },
         { href: '/settings', icon: Settings, label: 'Paramètres' },
